@@ -1,8 +1,8 @@
 #pragma once
 #include "myclass.h"
 
-#define N 30	// width
-#define M 20	// height
+#define MAP_WIDTH 30	// width
+#define MAP_HEIGHT 20	// height
 
 
 
@@ -72,15 +72,15 @@ struct Vector2d
 class SnakeGame {
 
 private:
-	int frame_number = 0;
-
-	int map[N][M];
+	int map[MAP_WIDTH][MAP_HEIGHT];
 
 	int body_length = 1;
 	Vector2d * snake_head;
 	Vector2d snake[256];
 
 	Vector2d dir;
+	//Vector2d old_dir;
+
 
 	//game logic
 	void RiseSnake(int amount = 1);
@@ -90,7 +90,7 @@ private:
 	void RestartGame();
 
 	void PlaceRandomFruit();
-	void Tick();
+	bool Tick();
 	void ServeKeyboard();
 
 

@@ -17,11 +17,6 @@ int Clamp(int min_value, int max_value, int value)
 }
 
 
-typedef struct Vector2
-{
-	int x, y;
-};
-
 
 void SetCursorPosition(int X, int Y)
 {
@@ -53,11 +48,11 @@ void PrintCharAtPos(int x, int y, unsigned char c) {
 	PrintChar(c);
 }
 
-
+/*
 void PrintCharAtPoint(struct Vector2 p, unsigned char c) {
 	SetCursorPosition(p.x, p.y);
 	PrintChar(c);
-}
+} */
 
 
 
